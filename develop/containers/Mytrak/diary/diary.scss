@@ -1,0 +1,601 @@
+.mytrakSubHeader--diaryCategoriesChanger {
+  float: left;
+  height: 100%;
+}
+
+.diaryCategoryChanger--item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.diaryCategoryChanger--itemIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.diaryCategoryChanger--itemText {
+  max-width: 145px;
+  font-family: $Roboto-regular;
+  font-size: $font-size-small;
+  line-height: 0.93;
+  color: $color-text-no-active;
+  padding-left: 20px;
+}
+
+.diaryCategoryChanger--itemText_Pressure{
+  padding-right: 58px;
+}
+
+.caloriesDiary {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.caloriesDiary--headMenu {
+  display: table;
+  width: 100%;
+  margin: 15px auto;
+  max-width: 360px;
+  padding: 0 15px;
+  div {
+    width: 33.33%;
+    height: 46px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: $font-size-small;
+    font-family: $Roboto-light;
+    color: rgba(38, 42, 49, 0.5);
+    cursor: pointer;
+  }
+}
+
+.caloriesDiary--content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.caloriesDiary--content__diary {
+  display: table;
+  max-width: 864px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.caloriesDiary--content__cal{
+  max-width: 812px;
+  width: 100%;
+  margin: 0 auto 150px auto;
+}
+
+.caloriesDiary--leftColumn {
+  width: 62.59%;
+}
+
+.caloriesDiary--rightColumn {
+  width: 37.41%;
+}
+
+.caloriesDiary--leftColumn, .caloriesDiary--rightColumn {
+  float: left;
+  padding: 0 6px;
+}
+
+.caloriesDiaryWidget {
+  width: 100%;
+  min-height: 48px;
+  margin-bottom: 12px;
+  background: #fafafa;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.caloriesDiaryWidget--header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 58px;
+}
+
+.caloriesDiaryWidget--headerText{
+  font-size: $font-size-normal;
+  font-family: $Roboto-regular;
+  &.__burned{
+    color: #f6b321;
+  }
+  &.__consumed{
+    color: #9f3a3a;
+  }
+}
+
+.caloriesDiaryWidget--headerValue{
+  font-size: 25px;
+  font-family: $Roboto-light;
+  color: $color-primary;
+}
+
+.caloriesDiaryWidget--GoalProgressValue{
+  font-family: $Roboto-light;
+  font-size: 25px;
+  color: $color-primary;
+  padding-top: 20px;
+  text-align: center;
+  span{
+    font-size: $font-size-small;
+  }
+}
+
+.caloriesDiaryWidget--GoalProgressSign{
+  //padding-top: 4px;
+  text-align: center;
+  font-family: $Roboto-light;
+  color: $color-text-secondary;
+  font-size: $font-size-tiny;
+}
+
+.caloriesDiaryWidget--GoalProgressLine{
+  padding: 15px 20px 20px 20px;
+}
+
+////************ ПРИЕМ ПИЩИ ************
+.caloriesDiaryIngestion {
+  min-height: 52px;
+  transition: all .3s ease-out;
+}
+
+.caloriesDiaryIngestion--header {
+  padding: 15px 20px 0;
+  //height: 50px;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.caloriesDiaryIngestion--goalRecomended{
+  padding: 15px 20px 20px;
+  text-align: right;
+  color: $color-text-secondary;
+  font-family: $Roboto-light;
+  font-size: $font-size-normal;
+}
+
+.caloriesDiaryIngestion--likedIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.caloriesDiaryIngestion--Title {
+  width: 100%;
+  //padding-left: 15px;
+  font-size: 18px;
+  font-family: $Roboto-regular;
+  color: $color-primary;
+}
+
+.caloriesDiaryIngestion--CalScore {
+  font-size: 18px;
+  font-family: $Roboto-light;
+  color: $color-primary;
+}
+
+.caloriesDiaryIngestion--productShortList {
+  box-sizing: content-box;
+  width: 100%;
+  height: 14px;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: $font-size-tiny;
+  font-family: $Roboto-light;
+  color: $color-primary;
+  padding: 0px 0 10px 0;
+  span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  //overflow: hidden;
+  //white-space: nowrap;
+  //text-overflow: ellipsis;
+}
+
+.caloriesDiaryIngestion--nutrients {
+  height: 36px;
+  border-top: 1px solid #dddfe2;
+  border-bottom: 1px solid #dddfe2;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.caloriesDiaryIngestion--nutrientsItem {
+  font-size: $font-size-small;
+  font-family: $Roboto-light;
+  color: $color-primary;
+}
+
+.caloriesDiaryIngestion--nutrientsItemText {
+  padding-left: 7px;
+}
+
+.caloriesDiaryIngestion--nutrientsItemCircle {
+  padding-left: 7px;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  &.__proteins {
+    background: #ed998e;
+  }
+  &.__fats{
+    background: #df5f5d;
+  }
+  &.__carbohydrates{
+    background: #9f3a3a;
+  }
+}
+
+.caloriesDiaryIngestion--nutrientsItemValue {
+  line-height: 20px;
+  padding-left: 7px;
+}
+
+.caloriesDiaryIngestion--ToggleArrowWrap {
+  cursor: pointer;
+  height: 30px;
+}
+
+.caloriesDiaryIngestion--ToggleArrow {
+  width: 40px;
+  height: 30px;
+  margin: auto;
+}
+
+.caloriesDiaryIngestion--body{
+
+  transition: all .3s ease-out;
+}
+
+.caloriesDiaryIngestion__open{
+  min-height: 148px;
+  .caloriesDiaryIngestion--nutrients, .caloriesDiaryIngestion--productShortList{
+    display: none;
+  }
+  .caloriesDiaryIngestion--body{
+    display: block;
+    //height: 600px;
+    //overflow: hidden;
+  }
+  .caloriesDiaryIngestion--bodyDetailed{
+    //display: block;
+    //height: 600px;
+
+  }
+}
+
+.caloriesDiaryIngestion--bodyDetailed{
+   height: 0;
+  //display: none;
+  //height: 0px;
+  overflow: hidden;
+  //transition: all .3s ease-out;
+}
+
+.caloriesDiaryIngestion--bodyDetailedProducts, .caloriesDiaryIngestion--nutritionalWrap{
+  border-top: 1px solid #dddfe2;
+  border-bottom: 1px solid #dddfe2;
+  background: #fff;
+}
+
+.caloriesDiaryIngestion--addingButtonWrap{
+  padding: 20px 0 15px 0;
+  min-height: 48px;
+}
+
+.caloriesDiaryIngestion--nutritionalWrap{
+
+}
+
+.caloriesDiaryIngestion--nutritionalTitle{
+  font-size: $font-size-small;
+  font-family: $Roboto-regular;
+  color: $color-primary;
+  padding: 10px 20px;
+}
+
+.caloriesDiaryIngestion--nutritionalHead{
+  display: table;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.caloriesDiaryIngestion--nutritionalDiagram{
+  float: left;
+  padding-left: 20px;
+  padding-top: 20px;
+
+}
+
+.caloriesDiaryIngestion--nutritionalPercents{
+  //margin-left: 100px;
+  padding: 0 10px;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.caloriesDiaryIngestion--nutritionalPercentsItem{
+  font-size: $font-size-small;
+  font-family: $Roboto-light;
+  color: $color-primary;
+  .caloriesDiaryIngestion--nutrientsItemText{
+    padding-left: 0;
+    display: block;
+  }
+  //width: 100px;
+}
+
+.caloriesDiaryIngestion--nutritionalTable{
+  padding: 10px;
+}
+
+.caloriesDiaryIngestion--nutritionalTableRow{
+  border-bottom: 1px solid #dddfe2;
+  display: table;
+  width: 100%;
+  &.__noBorder {
+    border: 0;
+  }
+}
+
+.caloriesDiaryIngestion--nutritionalTableRowTitle{
+  font-size: $font-size-tiny;
+  color: $color-primary;
+  font-family: $Roboto-regular;
+}
+
+.caloriesDiaryIngestion--nutritionalSpaceBetween{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  span {
+    padding: 5px;
+  }
+  &.__higthCalorieProduct{
+    border-bottom: 1px solid #dddfe2;
+    font-size: $font-size-small;
+    color: $color-primary;
+    font-family: $Roboto-light;
+    span {
+      padding: 10px 0;
+      &:first-child{
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+.caloriesDiaryIngestion--nutritionalTableRowCell{
+  font-size: $font-size-tiny;
+  color: #4e5768;
+  font-family: $Roboto-light;
+}
+
+
+
+//************ ПРОДУКТ В ПРИЕМЕ ПИЩИ ************
+
+.caloriesDiaryIngestion--productWrap{
+  padding-left: 10px;
+  padding-right: 10px;
+  &:last-child .consumedProduct{
+    border-bottom: 0;
+  }
+}
+
+.consumedProduct{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dddfe2;
+}
+
+.consumedProduct--title, .consumedProduct--other{
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.consumedProduct--title{
+  font-family: $Roboto-regular;
+  color: $color-primary;
+  font-size: 13px;
+}
+
+.consumedProduct--other{
+  font-family: $Roboto-light;
+  color: $color-text-secondary;
+  font-size: 13px;
+  padding-top: 5px;
+}
+//************
+
+
+//******************  КАЛЛОРИИ ДИАГРАММЫ ************************//
+.caloriesDiaryCal--flexWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.caloriesDiaryCal--flexWrap__progressBars{
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.caloriesDiaryCal--nutrientSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+  width: 33.33%;
+  font-family: $Roboto-light;
+  color: $color-primary;
+  font-size: $font-size-small;
+}
+
+.caloriesDiaryCal--nutrientSection__caloriesDoubleColumn{
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.caloriesDiaryCal--nutrientTitle{
+  text-align: center;
+  padding: 20px;
+  height: 40px;
+}
+
+.caloriesDiaryCal--progressTitle{
+  width: 100%;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.caloriesDiaryCal--nutrientDiagram{
+  width: 100%;
+  padding: 30px 20px 20px;
+  canvas {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.caloriesDiaryCal--nutrientValuesLeft{
+  .caloriesDiaryCal--nutrientValue{
+    text-align: right;
+  }
+}
+
+.caloriesDiaryCal--nutrientValuesRight{
+  padding-left: 15px;
+  .caloriesDiaryCal--nutrientValue{
+    text-align: left;
+  }
+}
+
+.caloriesDiaryCal--nutrientValue{
+  text-align: center;
+  padding: 7px 0;
+}
+
+.caloriesDiaryCal--nutrientValue__secondary{
+  font-family: $Roboto-light;
+  color: $color-text-secondary;
+}
+
+.caloriesDiaryCal--nutrientValue__title{
+  padding-top: 7px;
+  padding-bottom: 15px;
+}
+
+.caloriesDiaryCal--nutrientValue__main{
+  font-family: $Roboto-regular;
+  color: $color-primary;
+}
+
+.caloriesDiaryCal--nutrientValue__main, .caloriesDiaryCal--nutrientValue__secondary{
+  + span {
+    padding-left: 16px;
+  }
+
+}
+
+.caloriesDiaryCal--nutrientValues{
+  //width: 150px;
+  //margin: 0 auto;
+  .caloriesDiaryCal--nutrientValue{
+    text-align: left;
+  }
+}
+
+.caloriesDiaryCal--nutritionalTableTitle{
+  padding: 30px 10px;
+  border-top: 1px solid #dddfe2;
+  font-family: $Roboto-regular;
+  color: $color-primary;
+  font-size: $font-size-small;
+}
+
+@media (max-width: $layout-breakpoint-sm-tablet){
+  .caloriesDiary--leftColumn, .caloriesDiary--rightColumn{
+    width: 100%;
+  }
+
+  .caloriesDiary--rightColumn{
+    display: none;
+  }
+
+  .caloriesDiaryCal--flexWrap__progressBars{
+    flex-direction: column;
+    height: 150px;
+    align-items: center;
+    .caloriesDiaryCal--nutrientSection{
+      width: 100%;
+      max-width: 350px;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-xxs){
+  .caloriesDiaryCal--nutrientSection__diagramBottom{
+    &:nth-child(1), &:nth-child(3) {
+      width: 30%;
+    }
+    &:nth-child(2) {
+      width: 40%;
+    }
+  }
+
+  .caloriesDiaryIngestion--nutrientsItemText:not(.caloriesDiaryIngestion--nutrientsItemText__inDiagrams) {
+    display: none;
+  }
+  .caloriesDiaryCal--nutrientDiagram{
+    padding: 30px 0 20px;
+  }
+}
+
+@media (max-width: 420px){
+  .caloriesDiaryCal--nutrientSection {
+    font-size: $font-size-tiny;
+  }
+}
+
+@media (min-width: $layout-breakpoint-xxs){
+  .caloriesDiaryIngestion--nutritionalTableRowTitle{
+    width: 50%;
+    float: left;
+  }
+  .caloriesDiaryIngestion--nutritionalTableRowCell {
+    margin-left: 50%;
+    width: 50%;
+  }
+}

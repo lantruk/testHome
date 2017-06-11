@@ -1,0 +1,17 @@
+
+@import './config.scss' ;
+
+
+.refresh_metric_icon__icon{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: $background;
+  transition: $transition;
+}
+
+.refresh_metric_icon__icon:hover {
+  background: $background_on_hover;
+}

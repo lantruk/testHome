@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('/static/mytrak/public/fonts/robotoregular/robotoregular.eot');
+  src: url('/static/mytrak/public/fonts/robotoregular/robotoregular.eot?#iefix') format('embedded-opentype'),
+  url('/static/mytrak/public/fonts/robotoregular/robotoregular.woff') format('woff'),
+  url('/static/mytrak/public/fonts/robotoregular/robotoregular.woff2') format('woff2'),
+  url('/static/mytrak/public/fonts/robotoregular/robotoregular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('/static/mytrak/public/fonts/robotolight/robotolight.eot');
+  src: url('/static/mytrak/public/fonts/robotolight/robotolight.eot?#iefix') format('embedded-opentype'),
+  url('/static/mytrak/public/fonts/robotolight/robotolight.woff') format('woff'),
+  url('/static/mytrak/public/fonts/robotolight/robotolight.woff2') format('woff2'),
+  url('/static/mytrak/public/fonts/robotolight/robotolight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('/static/mytrak/public/fonts/robotomedium/robotomedium.eot');
+  src: url('/static/mytrak/public/fonts/robotomedium/robotomedium.eot?#iefix') format('embedded-opentype'),
+  url('/static/mytrak/public/fonts/robotomedium/robotomedium.woff') format('woff'),
+  url('/static/mytrak/public/fonts/robotomedium/robotomedium.woff2') format('woff2'),
+  url('/static/mytrak/public/fonts/robotomedium/robotomedium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}

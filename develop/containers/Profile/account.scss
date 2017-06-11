@@ -1,0 +1,190 @@
+
+.block--ul {
+  display: none;
+  border: 1px solid green;
+
+}
+
+.block-visible {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid #e7e9eb;
+  border-radius: 0 0 4px 4px;
+}
+
+.button {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid #e7e9eb;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.block--li {
+  list-style: none;
+  width: 100%;
+  height: 25px;
+  padding: 5px 0 0 30px;
+  background-color: #fafafa;
+}
+
+.block--li:hover {
+  background: rgba(206, 209, 214, 0.1);
+  background: #ffffff;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.accountPointsWrap {
+  display: table;
+  width: 100%;
+}
+
+.accountSocialAccountWrap {
+  margin-top: 40px;
+  display: table;
+  width: 100%;
+}
+
+.accountPoint {
+  box-sizing: border-box;
+  float: left;
+  height: 100px;
+  width: $x4;
+  max-width: 420px;
+  padding: 10px;
+  min-width: 260px;
+}
+
+.accountPoint--innerWrap {
+  height: 100%;
+}
+
+.accountPasswordBlock{
+  width: 100%;
+  float: left;
+}
+
+.accountSocialAccount {
+  box-sizing: border-box;
+  float: left;
+  width: $x12;
+  //height: 70px;
+  padding: 12px 10px;
+}
+
+.accountSocialAccount--innerWrap {
+  display: table;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.accountSocialAccount--IconColumn {
+  display: table-cell;
+  vertical-align: middle;
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+}
+
+.accountSocialAccount--Icon {
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.14);
+  path {
+    transition: all .4s ease;
+  }
+  ellipse {
+    transition: all .2s ease;
+  }
+  &:hover {
+    ellipse {
+      fill: $color-font-disabled;
+    }
+    path {
+      fill: #FAFAFA;
+    }
+  }
+}
+
+.accountSocialAccount--Icon__VK {
+
+}
+
+.accountSocialAccount--Icon__FB {
+}
+
+.accountSocialAccount--ContentColumn {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 15px;
+}
+
+.accountSocialAccount--UserName {
+  margin-bottom: 4px;
+  font-size: $font-size-normal;
+  color: $color-font-main;
+  display: block;
+  cursor: default;
+}
+
+.accountSocialAccount--Link{
+  display: block;
+  float: left;
+  padding-top: 2px;
+  height: 2rem;
+  font-size: $font-size-normal;
+  color: $color-font-main;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  //max-width: 200px;
+  cursor: default;
+}
+
+.accountSocialAccount--AddButton{
+  font-size: $font-size-small;
+  color: $color-text-no-active;
+  cursor: pointer;
+  &:hover{
+    color: $color-font-main;
+  }
+}
+
+.accountSocialAccount--ErrorText{
+  padding-top: 5px;
+  display: block;
+  color: $color-text-error;
+  font-size: $font-size-normal;
+}
+
+.accountSocialAccount--RemoveButton{
+  display: inline-block;
+  padding-left: 5px;
+  font-size: $font-size-tiny;
+  color: $color-font-disabled;
+  cursor: pointer;
+  &:hover{
+    color: $color-font-main;
+  }
+}

@@ -1,0 +1,920 @@
+//colors
+
+.__lowBloodPressure--color {
+  color: #2db4e5;
+}
+
+.__normalBloodPressure--color {
+  color: #f6b321;
+}
+
+.__highBloodPressure--color {
+  color: #d77922;
+}
+
+.__veryHighPressure--color {
+  color: #df5f5d;
+}
+
+.__severelyHighPressure--color {
+  color: #9f3a3a;
+}
+
+//colors end
+
+.pressure--informChackDayWrap {
+  margin: 0 auto;
+  background-color: #ffffff;
+
+}
+
+.pressure--informChackDay {
+  margin: 0 auto;
+  height: 113px;
+  //max-width: 1440px;
+}
+
+.pressure--informWrap {
+  //box-shadow: 0 1px 0 0 #e7e9eb;
+  margin: 0 auto;
+  max-width: 1723px;
+  background-color: #f3f3f3;
+}
+
+.pressure--informSection {
+  width: 17.3%;
+  // width: 25%;
+  border-right: 1px solid #e7e9eb;
+  height: 83px;
+  float: left;
+  margin-top: 15px;
+  min-width: 150px;
+}
+
+.pressure--informSection:nth-child(4) {
+  border-right: none;
+}
+
+.pressure--informBoard {
+  display: table;
+  margin: 0 auto;
+  padding-top: 7px;
+}
+
+.informBoard--container {
+  min-width: 170px;
+}
+
+.informBoard--container .informBoard--indexPressure {
+  padding-bottom: 4px;
+}
+
+.informBoard--icon {
+  width: 35px;
+  height: 35px;
+  float: left;
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+
+.informBoard--indexText {
+  font-size: 14px;
+  color: #a5a9b4;
+}
+
+.HeartrateIcon {
+  width: 18px;
+  height: 19px;
+}
+
+.informBoard--pulse {
+  font-family: $Roboto-regular;
+  font-size: 16px;
+  //padding-top: 7px;
+  display: table;
+}
+
+.dayPressure--pulse .informBoard--pulse {
+  margin: 0 auto;
+}
+
+.informBoard--dataPulse {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 6px;
+}
+
+.informBoard--indexPressure {
+  font-size: 25px;
+  color: #4e5768;
+  padding-top: 3px;
+}
+
+.addPressureElement {
+  float: left;
+  border-left: 1px solid #e7e9eb;
+  //line-height: 113px;
+  width: 27%;
+  // display: none;
+}
+
+.pressure--addPressureElement {
+  display: table;
+}
+
+.addElementWrap {
+  margin: 0 auto;
+  display: table;
+  height: 113px;
+  // display: none;
+  // position: absolute;
+  cursor: pointer;
+}
+
+.addPressureElement--text {
+  padding-right: 20px;
+  font-family: $Roboto-regular;
+  font-size: 18px;
+  color: #df5f5d;
+  //float: left;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.addPressureElement--button {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.AddPressureSmileWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.Adding {
+  width: 30px;
+  height: 31px;
+}
+
+.pressureDefaultInformation {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.pressureDefaultIcon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.pressureDefaultText {
+  font-size: 14px;
+  color: #6b7485;
+}
+
+.diagramInformationBlock {
+  display: table-cell;
+}
+
+.diagramInformationBlockText {
+  float: left;
+}
+
+.diagramInformation--StatisticLegend {
+  width: 10px;
+  height: 10px;
+  float: left;
+  margin-left: 40px;
+  margin-right: 6px;
+}
+
+.diagramInformation--StatisticLegend__manyPoints {
+  width: 20px;
+  height: 10px;
+  float: left;
+  margin-left: 40px;
+  margin-right: 6px;
+}
+
+.diagramIndicationWrap {
+  float: left;
+  font-family: $Roboto-light;
+  font-size: 12px;
+  position: absolute;
+  padding-left: 10px;
+  padding-top: 27px;
+  padding-bottom: 17px;
+}
+
+.diagramIndication {
+  padding: 16px 0;
+}
+
+.diagramInformationWrap {
+  padding-top: 15px;
+  padding-bottom: 5px;
+  min-width: 356px;
+  font-family: $Roboto-regular;
+  font-size: 13px;
+  color: #6b7485;
+}
+
+.pressureDiagram {
+  height: 360px;
+  transition: opacity 0.3s linear;
+  padding-left: 40px;
+}
+
+.pressureDiagram .dayStatChartWrap {
+  padding-top: 0;
+  height: 300px;
+}
+
+/*.pressureDiagram .dayStatChartWrap .dashboardWidget--OverflowForSVG {
+  height: 100%;
+  padding-top: 0;
+}*/
+
+.maxAndMinBloodPressureWrap {
+  width: 100%;
+  padding: 0 15px;
+  //display: table;
+  //height: 207px;
+}
+
+.bloodPressure--wrap {
+  background-color: white;
+  height: 206px;
+  margin: 15px 20px;
+  border: 1px solid #dddfe2;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.maxAndMinBloodPressureWrap__mobile {
+  display: none;
+  //background-color: #ffffff;
+}
+
+.maxAndMinBloodPressureWrap__computer {
+  display: block;
+  //max-width: 1440px;
+  margin: 0 auto;
+  max-width: 1682px;
+}
+
+.maxAndMin--text {
+  //float: left;
+  //height: 40px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.miniLine {
+  height: 25px;
+  width: 70px;
+  float: right;
+}
+
+.maxBloodPressure {
+  //display: table;
+  float: left;
+  width: 50%;
+  //height: 177px;
+  //margin: 15px 0;
+  //border-right: 1px solid #dddfe2;
+}
+
+.minBloodPressure {
+  width: 50%;
+  display: table;
+  //height: 177px;
+  //margin: 15px 0;
+}
+
+.maxBloodPressureText {
+  margin: 0 auto;
+  display: table;
+  padding-top: 27px;
+  padding-bottom: 36px;
+  font-family: $Roboto-regular;
+  font-size: 15px;
+}
+
+.maxBloodPressureSis {
+  float: left;
+  width: 50%;
+  text-align: center;
+  //padding-top: 35px;
+  font-family: $Roboto-regular;
+  font-size: 13px;
+  border-right: 1px solid #e7e9eb;
+}
+
+.maxBloodPressureDias {
+  float: left;
+  width: 50%;
+  text-align: center;
+  //padding-top: 35px;
+  font-family: $Roboto-regular;
+  font-size: 13px;
+  color: #4e5768;
+}
+
+.arterialPressure--text {
+  padding-bottom: 27px;
+}
+
+.arterialPressure--cont__central {
+  //background-color: aqua;
+  display: table;
+  /* width: 100%; */
+  /* text-align: center; */
+  margin: auto;
+  height: 83px;
+  width: 50%;
+}
+
+.maxAndMinBloodPressureWrap__mobile .arterialPressure--cont__central {
+  width: 100%;
+}
+
+.arterialPressure--cont {
+  display: table;
+  float: left;
+  width: 50%;
+}
+
+//.arterialPressure--cont:last-child {
+//  padding-left: 32px;
+//}
+
+.arterialPressure--cont .informBoard--pulse {
+  //padding-top: 6px;
+  //float: left;
+  margin: 0 auto;
+  display: table;
+}
+
+.arterialPressure--index {
+  //float: left;
+  font-size: 25px;
+  font-family: $Roboto-light;
+  //padding-right: 16px;
+}
+
+.arterialPressure--time {
+  padding-bottom: 20px;
+  font-family: $Roboto-regular;
+  font-size: 13px;
+  color: #a5a9b4;
+  //padding-right: 60px;
+}
+
+.dayPressureWrap {
+  // overflow-x: auto;
+  font-family: $Roboto-regular;
+  font-size: 13px;
+  background-color: #ffffff;
+}
+
+.dayPressureWrap .dayPressureWrap--data:last-child {
+  padding-bottom: 30px;
+}
+
+.dayPressureWrap--data {
+  background-color: white;
+  padding: 0 35px;
+}
+
+.dayPressureWrap--title {
+  background-color: #fafafa;
+  border-bottom: 1px solid #dddfe2;
+  border-top: 1px solid #dddfe2;
+  display: table;
+  width: 100%;
+
+}
+
+.dayPressure--title {
+  height: 40px;
+  //line-height: 40px;
+  min-width: 823px;
+  //max-width: 1370px;
+  //margin: 0 auto;
+  font-size: 13px;
+  color: #4e5768;
+  display: table;
+  width: 100%;
+  //box-shadow: 0 -1px 0 0 #dddfe2 inset;
+  margin-bottom: 8px;
+  padding: 0 30px;
+}
+
+.dayPressure--dataOverTime {
+  // min-width: 823px;
+  // max-width: 1370px;
+  //margin: 0 auto;
+  font-size: 13px;
+  color: #4e5768;
+  display: table;
+  width: 100%;
+  padding: 20px 0;
+  //box-shadow: 0 -1px 0 0 #dddfe2 inset;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.24);
+  margin: 13px 0;
+
+}
+
+.dayPressure--dataOverTime .dayPressure--time {
+  color: #a5a9b4;
+}
+
+.dayPressure--dataOverTime .dayPressure--pressure {
+  .dayPressure--pressureIndex {
+    font-size: 16px;
+    padding-bottom: 2px;
+  }
+
+  text-align: left;
+  padding-left: 5%;
+  font-size: 11px;
+  .dayPressure--pressureLine {
+    font-size: 13px;
+    padding-top: 5px;
+  }
+}
+
+.dayPressure--time {
+  //float: left;
+  width: 16%;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.miniMoon {
+  width: 16px;
+  height: 16px;
+  margin: 0 auto;
+}
+
+.miniSun {
+  width: 16px;
+  height: 16px;
+  margin: 0 auto;
+}
+
+.dayPressure--pressure {
+  //float: left;
+  width: 16%;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.dayPressure--pulse {
+  //float: left;
+  width: 16%;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.dayPressure--smile {
+  //float: left;
+  width: 16%;
+  text-align: center;
+  height: 35px;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.SmileIsAbsent {
+  width: 35px;
+  height: 35px;
+  display: table;
+  margin: 0 auto;
+}
+
+.dayPressure--medicine {
+  float: left;
+  width: 24%;
+  text-align: center;
+}
+
+.dayPressure--medicineText {
+  width: 70%;
+  text-align: left;
+  margin: 0 auto;
+  font-family: $Roboto-light;
+}
+
+.dayPressure--notes {
+  //float: left;
+  width: 30%;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.dayPressure--notesText {
+  width: 70%;
+  text-align: left;
+  margin: 0 auto;
+  font-family: $Roboto-light;
+}
+
+.dayPressure--menuDownload {
+  text-align: center;
+  width: 2%;
+  display: table;
+  margin-right: 12px;
+  float: right;
+}
+
+.dayPressure--menuEdit {
+  padding-right: 19px;
+  float: right;
+  margin-top: 10px;
+}
+
+.dayPressure--menuButton {
+  //font-family: $Roboto-medium;
+  // font-size: 23px;
+  // width: 25px;
+}
+
+.dayPressure--menu__Download_Icon {
+  width: 26px;
+  height: 27px;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+.dayPressure--PressureDrugsIcon {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+}
+
+.dayPressure--PressureNoteIcon {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+}
+
+.dayPressure--mobileIcon {
+  display: none;
+  float: left;
+  width: 60%;
+}
+
+.popAppPressure--Wrap {
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(221, 222, 226, 0.85);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  padding: 20px 20px 170px;
+  z-index: 3;
+}
+
+.closePopUpIcon {
+  position: absolute;
+  margin-top: 100px;
+  top: 40px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.popAppPressure--window {
+  min-height: 508px;
+  max-height: 508px;
+  padding: 44px 42px 10px;
+  color: #262a31;
+}
+
+.popAppFirstEnterPressure--window {
+  padding: 20px 20px 0;
+  color: #262a31;
+  max-width: 432px;
+}
+
+.popAppPressure--image {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.popAppPressure--titleText {
+  margin-top: 25px;
+  font-size: 25px;
+  text-align: center;
+  height: 25px;
+}
+
+.popAppPressure--text {
+  margin-top: 60px;
+  font-size: 16px;
+  line-height: 1.31;
+  text-align: center;
+  //height: 262px;
+  padding-bottom: 148px;
+}
+
+.popAppPressure--textWithButton {
+  margin-top: 60px;
+  font-size: 16px;
+  line-height: 1.31;
+  text-align: center;
+  //height: 184px;
+  padding-bottom: 50px;
+}
+
+.addPressureElement__mobile {
+  display: none;
+}
+
+.SaveAs--pdfXlsx__mobileWrap .menu__iconMenu {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+//840px
+@media (max-width: 940px /* $layout-breakpoint-sm*/
+) {
+
+  .dayPressureWrap .dayPressureWrap--data:last-child {
+    padding-bottom: 0;
+  }
+
+  .addPressureElement__mobile {
+    display: table;
+    margin: 0 auto;
+    .dayPressure--menuDownload {
+      display: table-cell;
+      vertical-align: middle;
+      width: 0;
+      margin-right: 0;
+      float: none;
+    }
+  }
+
+  .addPressureMobile--button__mobile {
+    border-right: 1px solid #dddfe2;
+    float: left;
+    line-height: 34px;
+    margin: 6px 22px 6px 0;
+    cursor: pointer;
+
+    .dayPressure--menu__Download_Icon {
+      margin: 0;
+    }
+  }
+  .addPressureElement--button {
+    padding-right: 46px;
+  }
+  .addPressureElement {
+    display: none;
+  }
+
+  .addPressureElement {
+    //line-height: 67px;
+    width: 100%;
+  }
+  .pressure--informSection {
+    width: 25%;
+    border-right: none;
+  }
+
+  .maxAndMinBloodPressureWrap__mobile {
+    display: block;
+  }
+  .maxAndMinBloodPressureWrap__computer {
+    display: none;
+  }
+
+  .pressure--informSection {
+    min-width: 100px;
+  }
+  .informBoard--container {
+    min-width: 100px;
+  }
+
+  .pressure--informChackDay {
+    height: 130px;
+  }
+
+  .informBoard--icon {
+    //margin-right: 5px;
+    float: none;
+    //margin-bottom: 5px;
+    margin: auto;
+  }
+
+  .informBoard--indexText {
+    text-align: center;
+  }
+
+  .informBoard--indexPressure {
+    text-align: center;
+  }
+  .informBoard--pulse {
+    margin: 0 auto;
+  }
+
+  .diagramIndicationWrap {
+    padding-left: 10px;
+  }
+
+  .addElementWrap {
+    height: 100px;
+  }
+
+  .dayPressure--time {
+    width: 18%;
+  }
+  .dayPressure--pressure {
+    width: 19%;
+    min-width: 80px;
+  }
+  .dayPressure--pulse {
+    width: 18%;
+  }
+  .dayPressure--smile {
+    width: 18%;
+  }
+
+  /* .dayPressure--medicineText {
+     width: 90%;
+   }
+
+   .dayPressure--notesText {
+     width: 90%;
+   }
+
+   .dayPressureWrap--title {
+     margin: auto;
+     display: table;
+   }*/
+  .dayPressureWrap--data {
+    padding: 0 10px;
+  }
+
+  .diagramInformation--StatisticLegend {
+    margin-left: 30px;
+  }
+  .dayPressure--dataOverTime .dayPressure--pressure {
+    padding-left: 5%;
+  }
+
+  .dayPressureWrap--title__mobile, .dayPressure--notes__mobile, .dayPressure--medicine__mobile {
+    display: none;
+  }
+
+  .dayPressure--mobileIcon {
+    display: block;
+  }
+
+  .bloodPressure--wrap {
+    margin: 15px 10px;
+  }
+}
+
+//480px
+@media (max-width: $layout-breakpoint-xxs) {
+  .pressure--informChackDayWrap {
+    height: 92px;
+  }
+  .pressure--informChackDay {
+    height: 92px;
+  }
+  .informBoard--container {
+    min-width: 10px;
+  }
+  .pressure--informSection {
+    min-width: 10px;
+  }
+  .informBoard--icon {
+    width: 18px;
+    height: 18px;
+    margin-top: 4px;
+  }
+  .informBoard--indexText {
+    font-size: 12px;
+    padding-top: 5px;
+  }
+  .informBoard--indexPressure {
+    font-size: 15px;
+    padding-top: 5px;
+
+  }
+  .informBoard--pulse {
+    .HeartrateIcon {
+      width: 12px;
+      height: 13px;
+    }
+    font-size: 12px;
+  }
+  .pressure--informBoard {
+    padding-top: 0;
+  }
+  .bloodPressure--wrap{
+  height: 96px;
+    margin: 4px 10px;
+    padding-top: 18px;
+  }
+  .maxAndMinBloodPressureWrap {
+    //height: 0;
+    padding: 0;
+    //padding-bottom: 10px;
+  }
+  .maxBloodPressure {
+    float: none;
+    width: 100%;
+
+  }
+  .minBloodPressure {
+    float: none;
+    width: 100%;
+  }
+  .maxAndMin--text{
+    display: none;
+  }
+  .maxBloodPressureText{
+    float: left;
+    padding-bottom: 0;
+    padding-top: 15px;
+  }
+  .maxBloodPressureText {
+    //padding-top: 0;
+  }
+  .maxBloodPressureSis {
+    //padding-top: 15px;
+    width: 33%;
+    height: 60px;
+  }
+  .maxBloodPressureDias {
+    //padding-top: 15px;
+    width: 33%;
+    height: 60px;
+  }
+  .arterialPressure--index {
+    font-size: 15px;
+    padding-right: 4px;
+  }
+  .arterialPressure--time {
+    padding-bottom: 26px;
+    font-size: 12px;
+    padding-right: 0;
+  }
+  .arterialPressure--cont .informBoard--pulse {
+    padding-top: 0;
+  }
+  .arterialPressure--text {
+    //padding-right: 0;
+  }
+  .diagramInformation--StatisticLegend__manyPoints {
+    margin-left: 15px;
+  }
+  .diagramInformationWrap {
+    font-size: 11px;
+  }
+  .diagramInformation--StatisticLegend {
+    margin-left: 15px;
+  }
+  .dayPressure--dataOverTime .dayPressure--smile {
+    height: 24px;
+  }
+  .dayPressure--dataOverTime .dayPressure--pressure {
+    padding-left: 0;
+    width: 23%;
+  }
+  .dayPressure--time {
+    width: 18%;
+  }
+  .dayPressure--pressure {
+    width: 19%;
+  }
+  .dayPressure--pulse {
+    width: 16%;
+  }
+  .dayPressure--smile {
+    width: 16%;
+  }
+  .dayPressure--mobileIcon {
+    width: 50%;
+  }
+  .addPressureElement--button {
+    padding-right: 20px;
+  }
+
+}
+

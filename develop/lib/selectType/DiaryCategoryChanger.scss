@@ -1,0 +1,59 @@
+@import "./_config.scss";
+
+.SelectTypeCategoryChanger__selectTypeContainer {
+  position: relative;
+  box-sizing: border-box;
+  //transition: border $main-transition;
+  cursor: pointer;
+  height: 100%;
+  > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    span {
+      display: block;
+      //height: 100%;
+    }
+  }
+  &.SelectTypeCategoryChanger__active {
+    .SelectTypeCategoryChanger__selectTypeValues {
+      display: block;
+    }
+  }
+
+  /*  &:hover, &.checked {
+      .selectType {
+        //border: $active_border;
+      }
+    }*/
+}
+
+.SelectTypeCategoryChanger__selectType {
+
+}
+
+.SelectTypeCategoryChanger__selectTypeValues {
+  display: none;
+  top: 62px;
+  left: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: absolute;
+  z-index: 2;
+  width: 228px;
+  background: white;
+  border-radius: $radius;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.13);
+  cursor: pointer;
+}
+
+.SelectTypeCategoryChanger__selectTypeValue {
+  height: 60px;
+}
+
+.SelectTypeCategoryChanger__dropArrow {
+  margin-top: 7px;
+  //height: 15px;
+  border: 7px solid transparent;
+  border-top-color: #a5a9b4;
+}

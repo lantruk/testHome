@@ -1,0 +1,162 @@
+@import "~_global_config.scss";
+@import "./config";
+
+.menu__iconMenu {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  .menu__icon {
+    cursor: pointer;
+
+  }
+}
+
+.menu__menu {
+  position: relative;
+  display: inline-block;
+  &.menu__topLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    > .menu__outline {
+      transform-origin: 0 0;
+    }
+  }
+  &.menu__topRight {
+    position: absolute;
+    top: 0;
+    right: 71px;
+    > .menu__outline {
+      transform-origin: 100% 0;
+    }
+  }
+  &.menu__bottomLeft {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    > .menu__outline {
+      transform-origin: 0 100%;
+    }
+  }
+  &.menu__bottomRight {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    > .menu__outline {
+      transform-origin: 100% 100%;
+    }
+  }
+  &:not(.static) {
+    z-index: $z-index-higher;
+    pointer-events: none;
+    > .menu__outline {
+      opacity: 0;
+      transition: transform $menu-expand-duration $animation-curve-default,
+      opacity $menu-fade-duration $animation-curve-default;
+      transform: scale(0);
+      will-change: transform;
+    }
+    > .menu__menuInner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+    &.menu__rippled:not(.active) {
+      > .menu__outline {
+        transition-delay: $menu-ripple-delay;
+      }
+      > .menu__menuInner {
+        transition-delay: $menu-ripple-delay;
+      }
+    }
+    &.menu__active {
+      pointer-events: all;
+      > .menu__outline {
+        opacity: 1;
+        transform: scale(1);
+      }
+      > .menu__menuInner {
+        opacity: 1;
+        transition: opacity $menu-fade-duration $animation-curve-default,
+        clip $menu-expand-duration $animation-curve-default;
+      }
+    }
+  }
+}
+
+.menu__outline {
+  @include shadow-2dp();
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: $menu-background-color;
+  border-radius: $menu-outline-border-radius;
+}
+
+.menu__menuInner {
+  position: relative;
+  display: block;
+  padding: $menu-padding;
+  text-align: left;
+  white-space: nowrap;
+  list-style: none;
+}
+
+.menu__menuItem {
+  position: relative;
+  display: flex;
+  height: $menu-item-height;
+  align-items: center;
+  padding: 0 $menu-item-padding;
+  overflow: hidden;
+  font-size: $menu-item-font-size;
+  color: $color-text;
+  &:not(.disabled):hover {
+    cursor: pointer;
+    background-color: $menu-item-hover-background;
+  }
+  &.menu__disabled {
+    pointer-events: none;
+    opacity: .5;
+  }
+  &.menu__selected {
+    font-weight: 500;
+    background-color: $menu-item-selected-background;
+  }
+  .menu__ripple {
+    color: $color-text-secondary;
+  }
+
+  .menu__icon {
+    width: $menu-item-icon-size;
+    font-size: $menu-item-icon-font-size !important;
+  }
+}
+
+.menu__caption {
+  flex-grow: 1;
+  font-size: $menu-text;
+  font-family: $Roboto-regular;
+  color: #6b7485;
+}
+
+.menu__shortcut {
+  margin-left: $menu-item-padding;
+}
+
+.menu__menuDivider {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: $menu-divider-height 0;
+  background-color: $color-divider;
+}
+
+.menu__toggle {
+  width: 120px;
+  height: 20px;
+}
+
+

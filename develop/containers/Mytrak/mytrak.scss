@@ -1,0 +1,127 @@
+@import './diary/diary';
+@import './dotesEclips.scss';
+@import './water.scss';
+@import './pressure.scss';
+@import 'addPressurePopUp';
+@import 'editMenu';
+@import 'editPressurePopUp';
+@import './dashboard/new_dashboard.scss';
+@import './dashboard/new_dashboard.scss';
+// поправь местоположение css файлов
+
+.mytrakSubHeader {
+  height: 60px;
+  border-top: 1px solid #dddfe2;
+  border-bottom: 1px solid #dddfe2;
+  box-shadow: 0 2px 4px 0 #dddfe2;
+  background-color: #fff;
+}
+
+.mytrakSubHeader--content {
+  width: 100%;
+  //max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+.mytrakSubHeader--dateChanger {
+  height: 100%;
+  float: right;
+}
+
+.dateChanger {
+  height: 100%;
+  justify-content: space-between;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.dateChanger--arrowBox {
+  cursor: pointer;
+  padding: 8px;
+}
+
+.dateChanger--arrow {
+  height: 12px;
+  width: 12px;
+  border: 7px solid transparent;
+}
+
+.dateChanger--arrow__left {
+  border-right-color: #a5a9b4;
+  //margin-right: 20px;
+  transition: all .2s ease-out;
+}
+
+.dateChanger--arrow__right {
+  border-left-color: #a5a9b4;
+  //margin-left: 20px;
+  transition: all .2s ease-out;
+}
+
+.dateChanger--arrow__left:hover {
+  margin-top: -3px;
+  border-right-color: #676e83;
+  box-shadow: 3px 0 1px -1px rgba(0, 0, 0, 0.24);
+}
+
+.dateChanger--arrow__right:hover {
+  margin-top: -3px;
+  border-left-color: #676e83;
+  box-shadow: -3px 0 1px -1px rgba(0, 0, 0, 0.24);
+}
+
+.dateChanger--DayPickerWrap{
+  cursor: pointer;
+  &:hover .dateChanger--DayPickerIcon{
+    opacity: 1;
+  }
+}
+
+.dateChanger--date {
+  margin-left: 20px;
+  font-family: $Roboto-regular;
+  font-size: $font-size-small;
+  color: $color-text-no-active;
+  float: left;
+  line-height: 20px;
+}
+
+.dateChanger--DayPickerIcon {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  margin-right: 20px;
+  opacity: 0.4;
+  transition: all .2s ease-out;
+  float: right;
+}
+
+.dateChanger--DayPickerIcon:hover {
+  opacity: 1;
+ // margin-top: -3px;
+ // box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.24);
+}
+
+ .DayPicker-Day:hover {
+          font-family:$Roboto-regular;
+      }
+
+
+
+
+
+
+@media (max-width: $layout-breakpoint-xxs) {
+  .mytrakSubHeader--diaryCategoriesChanger span {
+    > .diaryCategoryChanger--item {
+      width: auto;
+      .diaryCategoryChanger--itemText {
+        display: none;
+      }
+    }
+  }
+}

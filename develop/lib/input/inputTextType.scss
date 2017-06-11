@@ -1,0 +1,171 @@
+@import "~_global_config.scss";
+@import "./config";
+
+.inputTextType__input {
+  position: relative;
+  padding: $input-padding 0;
+  &.inputTextType__withIcon {
+    margin-left: $input-icon-size;
+  }
+}
+
+.inputTextType__icon {
+  position: absolute;
+  top: $input-icon-offset;
+  left: -$input-icon-size;
+  display: block;
+  width: $input-icon-size;
+  height: $input-icon-size;
+  font-size: $input-icon-font-size !important;
+  line-height: $input-icon-size !important;
+  color: $input-text-label-color;
+  text-align: center;
+  transition: color $animation-duration $animation-curve-default;
+}
+
+.inputTextType__inputElement {
+  display: block;
+  width: 100%;
+  padding: $input-field-padding $input-padding-relative-line;
+  font-size: $input-field-font-size;
+  color: $color-text;
+  background-color: $input-text-background-color;
+  border: 0;
+  border-bottom: 1px solid $input-text-bottom-border-color;
+  outline: none;
+  border-radius: 0;//fix Apple Safari
+  &:focus {
+    ~ .inputTextType__bar:before, ~ .inputTextType__bar:after {
+      width: 50%;
+    }
+    ~ .inputTextType__label:not(.fixed) {
+      color: $input-text-highlight-color;
+    }
+    ~ .inputTextType__label > .inputTextType__required {
+      color: $input-text-required-color;
+    }
+    ~ .inputTextType__hint {
+      opacity: $input-hint-opacity;
+    }
+    ~ .inputTextType__icon {
+      color: $input-text-highlight-color;
+    }
+  }
+  &:focus, &.inputTextType__filled, &[type="date"], &[type="time"] {
+    ~ .inputTextType__label:not(.fixed) {
+      top: $input-focus-label-top;
+      font-size: $font-size-small;
+    }
+  }
+  &.inputTextType__filled ~ .inputTextType__label.inputTextType__fixed, &.inputTextType__filled ~ .inputTextType__hint {
+    display: none;
+  }
+}
+
+.inputTextType__label {
+  position: absolute;
+  top: $input-padding + (1.5 * $input-field-padding);
+  left: 0;
+  padding: 0 $input-padding-relative-line;
+  font-size: $input-field-font-size;
+  line-height: $input-field-font-size;
+  color: $input-text-label-color;
+  pointer-events: none;
+  transition-timing-function: $animation-curve-default;
+  transition-duration: $animation-duration;
+  transition-property: top, font-size, color;
+  &.inputTextType__fixed ~ .inputTextType__hint {
+    display: none;
+  }
+}
+
+.inputTextType__hint {
+  position: absolute;
+  top: $input-padding + (1.5 * $input-field-padding);
+  padding: 0 $input-padding-relative-line;
+  left: 0;
+  font-size: $input-field-font-size;
+  line-height: $input-field-font-size;
+  color: $input-text-label-color;
+  pointer-events: none;
+  opacity: 0;
+  transition-timing-function: $animation-curve-default;
+  transition-duration: $animation-duration;
+  transition-property: opacity;
+}
+
+.inputTextType__link {
+  position: absolute;
+  top: $input-padding + (1.5 * $input-field-padding);
+  right: 0;
+  //right: $input-padding-relative-line;
+  font-family: $Roboto-regular;
+  font-size: $input-link-font-size;
+  line-height: $input-link-font-size;
+  color: $color-text-secondary;
+  transition: $input-onHover-transition;
+  &:hover {
+    cursor: pointer;
+    color: $color-text-gold;
+  }
+}
+
+.inputTextType__bar {
+  position: relative;
+  display: block;
+  width: 100%;
+  &:before, &:after {
+    @include material-animation-default();
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    content: "";
+    background-color: $input-text-highlight-color;
+    transition-property: width, background-color;
+  }
+  &:before {
+    left: 50%;
+  }
+  &:after {
+    right: 50%;
+  }
+}
+
+.inputTextType__error, .inputTextType__counter {
+  padding: 0 $input-padding-relative-line;
+  margin-bottom: - $input-underline-height;
+  font-size: $input-label-font-size;
+  line-height: $input-underline-height;
+  color: $input-text-error-color;
+}
+
+.inputTextType__counter {
+  display: none;
+  position: absolute;
+  right: 0;
+  color: $input-text-label-color;
+}
+
+.inputTextType__disabled > .inputTextType__inputElement {
+  color: $input-text-disabled-text-color;
+  border-bottom-style: dotted;
+}
+
+.inputTextType__errored {
+  padding-bottom: 0;
+  > .inputTextType__inputElement {
+    margin-top: 1px;
+    border-bottom-color: $input-text-error-color;
+  }
+  > .inputTextType__counter, > .inputTextType__label {
+    color: $input-text-error-color;
+  }
+  > .inputTextType__label > .inputTextType__required {
+    color: $input-text-error-color;
+  }
+}
+
+.inputTextType__hidden {
+  display: none;
+}

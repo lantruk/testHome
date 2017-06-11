@@ -1,0 +1,19 @@
+.DotesEclips {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.DotesEclips--CirclePositionWrap{
+  padding: 3px;
+  cursor: pointer;
+  margin: 0 3px;
+}
+
+.DotesEclips--CirclePosition {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(165, 169, 179, 0.3);
+}

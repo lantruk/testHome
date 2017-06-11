@@ -1,0 +1,88 @@
+.newCart--pressureDiagram {
+  height: 360px;
+  transition: opacity 0.3s linear;
+  /* padding-left: 40px; */
+}
+
+.dayStatChartWrap {
+  margin: 0 auto;
+  //padding-top: 28%;
+  font-size: 14px;
+  //position: relative;
+  width: 100%;
+  //border: 1px solid #dbdbdb;
+  cursor: grab;
+  &:hover {
+    .button {
+      opacity: 0.9;
+    }
+  }
+
+  .button {
+    //opacity: 1;
+    transition: opacity .3s linear;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    background: #dadada;
+    height: 100%;
+    cursor: pointer;
+    width: 50px;
+    z-index: 1;
+    border: none;
+    border-radius: 0;
+    &.active {
+      visibility: visible;
+    }
+    &.left {
+      left: 0px;
+      background: -moz-linear-gradient(left, rgba(165, 169, 180, 0.65) 0%, rgba(255, 255, 255, 0) 100%);
+      background: -webkit-linear-gradient(left, rgba(165, 169, 180, 0.65) 0%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(to right, rgba(165, 169, 180, 0.65) 0%, rgba(255, 255, 255, 0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6a5a9b4', endColorstr='#00ffffff', GradientType=1);
+    }
+    &.right {
+      right: 0px;
+      background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(165, 169, 180, 0.65) 100%);
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(165, 169, 180, 0.65) 100%);
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(165, 169, 180, 0.65) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#a6a5a9b4', GradientType=1);
+    }
+    .arrow {
+      width: 30px;
+      height: 20px;
+      position: absolute;
+      //border: 12px solid transparent;
+      //border-top-color: white;
+      margin: 0;
+      padding: 0;
+      float: left;
+      top: 45%;
+      &.left {
+        // background: gray no-repeat 50% 50%;
+        //border: none;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        left: 30%;
+      }
+      &.right {
+        //background: gray no-repeat 50% 50%;
+        //border: none;
+        transform: none;
+        -webkit-transform: none;
+        -o-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        left: 30%;
+      }
+    }
+  }
+}
+
+.dayStatChartWrap.statistic--dragged {
+  cursor: grabbing;
+}

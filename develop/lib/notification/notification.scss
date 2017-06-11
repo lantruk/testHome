@@ -1,0 +1,72 @@
+
+.container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 35%;
+  max-width: 343px;
+  width: 90%;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.24);
+  z-index: 200;
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  &.success{
+
+  }
+  &.error{
+    .header {
+      color: #c13d43;
+    }
+  }
+  .header {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 25px;
+    font-weight: 300;
+    color: #262a31;
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+
+

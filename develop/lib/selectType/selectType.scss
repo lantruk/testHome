@@ -1,0 +1,85 @@
+/*
+@import "./_config.scss";
+
+.SelectTypePrivacy__selectTypeContainer{
+  position: relative;
+  box-sizing: border-box;
+  transition: border $main-transition;
+  cursor: pointer;
+  &.SelectTypePrivacy__active{
+    height: 100%;
+    max-height: 270px;
+    .SelectTypePrivacy__selectTypeValues{
+      display:block;
+    }
+  }
+  &:hover, &.SelectTypePrivacy__checked {
+    .SelectTypePrivacy__selectType {
+      border: $active_border;
+    }
+  }
+}
+
+
+.SelectTypePrivacy__selectType {
+  border: $noactive_border;
+  border-radius: $radius;
+  box-sizing: border-box;
+  color: $color-primary;
+  font-size: $font-size-small;
+  font-weight: $font-weight-thin;
+  padding: 15px 13px;
+  vertical-align: middle;
+  height: 46px;
+  min-width: 46px;
+}
+
+.SelectTypePrivacy__selectTypeValues{
+  display: none;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: $z-index-normal;
+  max-height: 270px;
+  //overflow-y: auto;
+  width: 100%;
+  border-radius: $radius;
+  border: $noactive_border;
+
+  color: $color-primary;
+  font-size: 14px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  cursor: default;
+}
+
+.SelectTypePrivacy__selectTypeValues__withScroll{
+  display: none;
+  cursor: default;
+}
+
+.SelectTypePrivacy__selectTypeValue{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 13px;
+  display: block;
+  background: white;
+  transition: all $arrow-transition;
+  cursor: pointer;
+  &:hover , &.SelectTypePrivacy__selected {
+    background: #dddfe2;
+  }
+}
+
+.SelectTypePrivacy__dropArrow{
+  position: relative;
+  float: right;
+  top: 4px;
+  margin-left: 5px;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 11px;
+  height: 7px;
+  background: $profile-checkMark2 center center no-repeat;
+  background-size: contain;
+}*/

@@ -1,0 +1,114 @@
+
+@import "~_global_config.scss";
+@import "./config";
+@import "../input/config";
+
+.autocomplete__autocomplete {
+  position: relative;
+  padding: 0 0;
+  &.autocomplete__focus {
+    .autocomplete__label {
+      color: $autocomplete-label-color;
+    }
+    .autocomplete__suggestions:not(.__inScroll) {
+      //max-height: $autocomplete-overflow-max-height;
+      visibility: visible;
+      box-shadow: $zdepth-shadow-1;
+    }
+  }
+}
+
+.autocomplete__label {
+  font-size: $font-size-tiny;
+  color: $autocomplete-label-color;
+  transition: color $animation-duration $animation-curve-default;
+}
+
+.autocomplete__values {
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: $unit / 2;
+}
+
+.autocomplete__value {
+  margin: $autocomplete-value-margin;
+}
+
+.autocomplete__suggestions {
+  @include no-webkit-scrollbar;
+  //position: absolute;
+  //z-index: $z-index-high;
+  width: 100%;
+  //overflow-x: hidden;
+  //overflow-y: auto;
+  //visibility: hidden;
+  background-color: $autocomplete-suggestions-background;
+  transition-timing-function: $animation-curve-default;
+  transition-duration: $animation-duration;
+  transition-property: max-height, box-shadow;
+  &:not(.autocomplete__up) {
+    margin-top: - $input-padding;
+  }
+  &.autocomplete__up {
+    bottom: 0;
+  }
+  &:not(.__inScroll){
+    //max-height: 0;
+  }
+  &.autocomplete____inScroll{
+    //visibility: visible;
+    //overflow-y: hidden;
+    //position: static;
+    margin-top: 0;
+  }
+}
+
+.autocomplete__suggestion {
+  padding: $autocomplete-suggestion-padding 17px;
+  font-size: $input-field-font-size;
+  cursor: pointer;
+  &.autocomplete__active {
+    background-color: $autocomplete-suggestion-active-background;
+  }
+}
+
+.autocomplete__input {
+  position: relative;
+  &:after {
+    $size: ($input-field-height / 7);
+    $border: $size solid transparent;
+    position: absolute;
+    top: 50%;
+    right: $input-chevron-offset;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    content: "";
+    border-top: $size solid $input-text-bottom-border-color;
+    border-right: $border;
+    border-left: $border;
+    transition: transform $animation-duration $animation-curve-default;
+  }
+}
+
+.autocomplete__scrollContainer{
+  margin-top: - $input-padding;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  box-sizing: border-box;
+  z-index: 300;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  //transition: all .2s linear;
+  &.autocomplete__active{
+    //visibility: visible;
+    display: block;
+    opacity: 1;
+    //top: 0;
+    //margin-top: 0;
+
+  }
+}
+

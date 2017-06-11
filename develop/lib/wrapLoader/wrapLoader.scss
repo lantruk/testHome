@@ -1,0 +1,29 @@
+.wrapLoader {
+  display: -ms-flexbox;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  //display: none;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: 300;
+  width: 100vw;
+  height: 100vh;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  transition: opacity 0.3s linear;
+}
+
+.wrapLoader__active {
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+  z-index: 1300;
+}

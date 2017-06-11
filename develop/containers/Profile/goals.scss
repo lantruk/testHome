@@ -1,0 +1,147 @@
+$offset-right-column: 2.4%;
+
+.goalsPointsWrap {
+  max-width: 820px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.goalsGlobal {
+  padding-top: 10px;
+}
+
+.goalsGlobalCheckedBox {
+  .surroundedCheck__surroundedCheck {
+    margin-bottom: 20px;
+  }
+}
+
+.goalsMetrics {
+  display: table;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.goalsMetricsColumn {
+  width: 50% - $offset-right-column/2;
+  min-width: 310px;
+  float: left;
+}
+
+.goalsMetricsColumn:first-child {
+  margin-right: $offset-right-column;
+  .goalsGoalRow {
+    float: left;
+  }
+}
+
+.goalsMetricsColumn:last-child .goalsGoalRow {
+  float: right;
+}
+
+.goalsGoalRow {
+  vertical-align: middle;
+  display: table;
+  margin-bottom: 20px;
+}
+
+.goalsGoalRow__disabled {
+  .goalsGoalRow--Text {
+    color: $color-text-disabled;
+  }
+}
+
+.goalsGoalRow--Image {
+  display: table-cell;
+  vertical-align: middle;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  min-height: 30px;
+  svg {
+    width: 30px; //For IE
+    height: 30px;
+  }
+}
+
+.goalsGoalRow--Text {
+  color: $color-primary;
+  font-size: $font-size-small;
+  padding-left: 15px;
+  width: 210px;
+  vertical-align: middle;
+  display: table-cell;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.goalsGoalRow--Input {
+  /* vertical-align: middle;
+   display: table-cell;*/
+  position: relative;
+  width: 82px;
+  color: $color-primary;
+  font-size: $font-size-small;
+  input {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1.15rem;
+    /* height: 100%; */
+    color: #262a31;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    transition: border .2s ease-out;
+    &:focus {
+      border: 1px solid #a8abb0;
+    }
+  }
+  /*****************************/
+}
+
+.returnRecommended {
+  display: table;
+  width: 100%;
+  max-width: 330px;
+  margin: 0 auto;
+  svg {
+    display: table-cell;
+    vertical-align: middle;
+    float: left;
+  }
+}
+
+.returnRecommended--text {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 25px;
+  color: $color-text-no-active;
+  font-size: $font-size-normal;
+}
+
+@media (max-width: $layout-breakpoint-xxs) {
+  .goalsMetricsColumn {
+    min-width: initial;
+  }
+
+  .goalsGoalRow {
+    width: 100%;
+  }
+
+  .goalsGoalRow--Input {
+    float: right;
+  }
+  .goalsMetricsColumn {
+    width: 100%;
+  }
+
+  .goalsGoalRow--Text {
+    padding: 15px 0 15px 15px;
+    width: 60%;
+    display: inline-block;
+
+  }
+}

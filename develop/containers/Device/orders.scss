@@ -1,0 +1,92 @@
+
+$offset: 20px;
+
+.deviceUpgrade--modernizationWrap{
+  margin-top: 40px;
+}
+
+.modernizationOrder--Title{
+  font-family: $Roboto-light;
+  font-size: 20px;
+  color: $color-primary;
+  padding-left: $offset;
+  margin-bottom: $offset;
+}
+
+.modernizationOrder--Mes{
+  font-family: $Roboto-light;
+  font-size: $font-size-small;
+  color: #586072;
+  padding: $offset;
+}
+
+.modernizationOrder--Blank{
+  padding: $offset;
+  border: 1px solid #e7e9eb;
+  border-radius: 3px;
+  background-color: #fafafa;
+  display: table;
+  width: 100%;
+  span {
+    display: block;
+    font-size: $font-size-small;
+    padding-bottom: 10px;
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+}
+
+
+.modernizationOrder--BlankItems{
+  display: table-cell;
+  width: 110px;
+  span{
+    font-family: $Roboto-light;
+    color: $color-primary;
+  }
+}
+
+.modernizationOrder--BlankItemsValue{
+  display: table-cell;
+  span{
+    font-family: $Roboto-light;
+    color: $color-text-gold;
+  }
+}
+
+.modernizationOrder--Details{
+  padding: $offset;
+  font-family: $Roboto-regular;
+  font-size: $font-size-normal;
+  color: $color-primary;
+}
+
+.modernizationOrder--DetailsItem{
+  display: table;
+  width: 100%;
+  padding: 14px $offset 14px $offset;
+  border-bottom: 1px solid #e7e9eb;
+  border-top: 1px solid #e7e9eb;
+}
+
+.modernizationOrder--DetailsItemText{
+  display: block;
+  float: left;
+  font-family: $Roboto-light;
+  font-size: $font-size-small;
+  color: $color-primary;
+}
+
+.modernizationOrder--DetailsItemPrice{
+  display: block;
+  float: right;
+  font-family: $Roboto-light;
+  font-size: $font-size-small;
+  color: $color-primary;
+}
+
+.modernizationOrder--PayButton{
+  margin-top: 40px;
+  margin-bottom: 100px;
+}

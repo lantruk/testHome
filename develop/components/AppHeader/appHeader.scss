@@ -1,0 +1,345 @@
+.globalMenu {
+  font-family: $Roboto-light;
+  padding-right: 0;
+  padding-left: 0;
+  background-color: rgba(250, 250, 250, 1);
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  top: 0;
+  border-width: 0 0 1px;
+  color: #777;
+  //line-height: 1.5;
+  line-height: 0;
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
+
+}
+
+.globalMenu--wrapp {
+  box-sizing: border-box;
+  position: relative;
+  padding: 10px 15px 10px 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: inline-block;
+  width: 100%;
+  height: $header-height-normal;
+}
+
+.globalMenu--logoOnetrak {
+  position: absolute;
+  width: 175px;
+  display: block;
+  padding: 5px 0 0 15px;
+  svg {
+    width: 175px;
+    height: 50px;
+  }
+  @media (max-width: 767px) {
+    padding: 0;
+    //width: 139px;
+    svg {
+      width: 135px;
+      height: 40px;
+    }
+  }
+  @media (min-width: 768px) {
+    //margin-left: -15px;
+    svg {
+      width: 135px;
+      height: 40px;
+    }
+    @media (min-width: 1100px) {
+      padding-top: 10px;
+    }
+  }
+}
+
+.globalMenu--RightCorner {
+  margin-right: 0;
+  display: table;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  height: auto;
+  visibility: visible;
+  max-width: 340px;
+  font-size: 14px;
+}
+
+.globalMenu--BellWrap {
+  border-right: 1px solid #e7e9eb;
+  padding: 8px 30px 15px 30px;
+  border-left: 1px solid #e7e9eb;
+  &.__hidden {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.globalMenu--BellIcon {
+  background-image: url('data:image/png;base64,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');
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  opacity: .8;
+  background-size: contain;
+  margin-top: 10px;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.globalMenu--BellNotification {
+  text-align: center;
+  background-color: rgba(165, 129, 68, 1);
+  font-weight: 300;
+  margin-top: -30px;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 12px;
+  position: absolute;
+  border: 1px solid #FFFFFF;
+}
+
+.globalMenu--Profile {
+  //margin-left: 10px;
+  height: 77px;
+  //margin-top: -5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: table-cell;
+  vertical-align: middle;
+  transition: background-color 0.2s linear;
+  &:hover {
+    background-color: #eee;
+    cursor: pointer;
+  }
+}
+
+.globalMenu--UserName {
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  text-align: left;
+  padding-left: 15px;
+  line-height: 1.25;
+  display: table-cell;
+}
+
+.globalMenu--ProfileImageWrap {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.globalMenu--ProfileImage {
+  background: white;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #c2c2c2;
+}
+
+.miniMenu {
+  font-family: $Roboto-regular;
+  display: none;
+  position: absolute;
+  font-size: 14px;
+  border-radius: 4px;
+  background: white;
+  width: 115px;
+  padding: 0 10px;
+  top: 68px;
+  left: -23px;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.13);
+  color: #4e5768;
+  li:first-of-type {
+    padding-top: 20px;
+  }
+
+  &.active {
+    display: block;
+  }
+  & .miniMenu--toLogout {
+    color: #a5a9b4;
+    border-top: 1px solid #a5a9b4;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  li {
+    display: block;
+    //margin: 10px 0;
+    transition: color 0.3s linear;
+    padding: 10px;
+  }
+  li:hover {
+    color: #a58144;
+    cursor: pointer;
+  }
+}
+
+.menuTrigger::before {
+  background: $color-background-dark none repeat scroll 0 0;
+  box-shadow: 0 2px #34495e, 0 3px #e1e1e1,
+  0 9px #34495e, 0 10px #e1e1e1,
+  0 16px #34495e, 0 17px #e1e1e1;
+  content: "";
+  height: 2px;
+  position: absolute;
+  width: 25px;
+}
+
+.menuTrigger {
+  padding-top: 19px;
+  padding-right: 45px;
+  padding-left: 20px;
+  height: 100%;
+  display: none;
+}
+
+.globalMenu--sectionMenu {
+  line-height: 1.5;
+}
+.globalMenu--listMenu{
+  list-style: none;
+  margin: 0 auto;
+  text-align: center;
+  display: table;
+  li {
+    position: relative;
+    padding: 9px 0 5px 0;
+    display: inline-block;
+    cursor: pointer;
+  }
+  a {
+    position: relative;
+    font-size: 16px;
+    display: block;
+    padding: 10px 15px;
+  }
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    color: #444444;
+  }
+  a:active {
+    color: #a58144;
+  }
+}
+
+.globalMenu--listMenu__x2sections:not(.globalMenu--sectionMenu) {
+  a {
+    font-size: 16px;
+    padding: 10px 40px;
+
+  }
+}
+
+@media (max-width: 1100px) {
+  .globalMenu--logoOnetrak {
+    padding-top: 10px;
+    width: 135px;
+  }
+  .globalMenu--sectionMenu {
+    width: auto;
+    margin-left: 0;
+  }
+  .globalMenu--listMenu {
+
+    a {
+      padding: 11px 15px;
+      text-align: center;
+    }
+  }
+  .globalMenu--BellWrap {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: -30px;
+  }
+  .globalMenu--BellIcon {
+    width: 25px;
+    height: 25px;
+  }
+  .globalMenu--Profile {
+    .globalMenu--UserName {
+      font-size: 12px;
+      margin-top: 19px;
+      max-width: 95px;
+
+    }
+  }
+  .globalMenu--ProfileImage {
+    width: 40px;
+    height: 40px;
+  }
+  .globalMenu--RightCorner {
+    max-width: 220px;
+  }
+  .miniMenu {
+    left: -26px;
+    top: 65px;
+  }
+}
+
+@media (max-width: $layout-breakpoint-md) {
+  .globalMenu--listMenu {
+    a {
+      font-size: 13px;
+      padding: 11px 5px;
+    }
+
+  }
+}
+
+@media (max-width: 768px) {
+  .globalMenu--wrapp {
+    float: left;
+    height: $header-height-small;
+  }
+  .globalMenu--sectionMenu {
+    display: none;
+  }
+  .globalMenu--logoOnetrak {
+    padding-top: 0;
+  }
+  .globalMenu--RightCorner {
+    top: 0;
+    width: auto;
+  }
+
+  .globalMenu--Profile {
+    height: $header-height-small;
+  }
+  .globalMenu--BellWrap {
+    border: 0;
+  }
+  .globalMenu--Profile {
+    span {
+      display: none;
+    }
+    &:hover {
+      background-color: transparent;
+    }
+  }
+  .globalMenu--ProfileImage {
+    height: 30px;
+    width: 30px;
+  }
+  .menuTrigger {
+    display: table-cell;
+  }
+  .miniMenu {
+    left: -30px;
+    top: 54px;
+  }
+}
+
